@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    
+    <!-- 車輛類型定義 -->
+    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="4.5" minGap="2.0" maxSpeed="16.67"/>
+    <vType id="bus" accel="1.2" decel="4.0" sigma="0.3" length="12.0" minGap="3.0" maxSpeed="13.89" vClass="bus"/>
+    <vType id="truck" accel="1.5" decel="4.0" sigma="0.4" length="8.0" minGap="3.0" maxSpeed="13.89"/>
+    
+    <!-- 主要路線 (東向) -->
+    <route id="main_east" edges="E0_J1 J1_J2 J2_J3 J3_J4 J4_J5 J5_E0"/>
+    <route id="main_west" edges="E0_J5 J5_J4 J4_J3 J3_J2 J2_J1 J1_E0"/>
+    
+    <!-- 部分路線 (測試不同起終點) -->
+    <route id="short_east_1" edges="E0_J1 J1_J2 J2_J3"/>
+    <route id="short_east_2" edges="J2_J3 J3_J4 J4_J5 J5_E0"/>
+    <route id="short_west_1" edges="E0_J5 J5_J4 J4_J3"/>
+    <route id="short_west_2" edges="J3_J2 J2_J1 J1_E0"/>
+    
+    <!-- 左轉路線 -->
+    <route id="left_turn_j1" edges="E0_J1 J1_N1"/>
+    <route id="left_turn_j2" edges="J1_J2 J2_S2"/>
+    <route id="left_turn_j3" edges="J2_J3 J3_N3"/>
+    <route id="left_turn_j4" edges="J3_J4 J4_S4"/>
+    <route id="left_turn_j5" edges="J4_J5 J5_N5"/>
+    
+    <!-- 右轉路線 -->
+    <route id="right_turn_j1" edges="E0_J1 J1_S1"/>
+    <route id="right_turn_j2" edges="J1_J2 J2_N2"/>
+    <route id="right_turn_j3" edges="J2_J3 J3_S3"/>
+    <route id="right_turn_j4" edges="J3_J4 J4_N4"/>
+    <route id="right_turn_j5" edges="J4_J5 J5_S5"/>
+    
+    <!-- 公車路線 -->
+    <route id="bus_route_1" edges="E0_J1 J1_J2 J2_J3 J3_J4 J4_J5 J5_E0"/>
+    <route id="bus_route_2" edges="E0_J5 J5_J4 J4_J3 J3_J2 J2_J1 J1_E0"/>
+    
+    <!-- 車流生成 -->
+    <!-- 尖峰時段 (07:00-09:00, 17:00-19:00) -->
+    <flow id="morning_rush_east" route="main_east" begin="0" end="7200" vehsPerHour="1800" type="car"/>
+    <flow id="morning_rush_west" route="main_west" begin="0" end="7200" vehsPerHour="900" type="car"/>
+    
+    <!-- 一般時段 -->
+    <flow id="regular_east" route="main_east" begin="7200" end="32400" vehsPerHour="800" type="car"/>
+    <flow id="regular_west" route="main_west" begin="7200" end="32400" vehsPerHour="600" type="car"/>
+    
+    <!-- 晚峰時段 -->
+    <flow id="evening_rush_east" route="main_east" begin="32400" end="39600" vehsPerHour="900" type="car"/>
+    <flow id="evening_rush_west" route="main_west" begin="32400" end="39600" vehsPerHour="1800" type="car"/>
+    
+    <!-- 短程車流 -->
+    <flow id="short_flow_1" route="short_east_1" begin="0" end="39600" vehsPerHour="300" type="car"/>
+    <flow id="short_flow_2" route="short_east_2" begin="0" end="39600" vehsPerHour="250" type="car"/>
+    <flow id="short_flow_3" route="short_west_1" begin="0" end="39600" vehsPerHour="280" type="car"/>
+    <flow id="short_flow_4" route="short_west_2" begin="0" end="39600" vehsPerHour="220" type="car"/>
+    
+    <!-- 轉彎車流 -->
+    <flow id="left_turn_flow_j2" route="left_turn_j2" begin="0" end="39600" vehsPerHour="120" type="car"/>
+    <flow id="left_turn_flow_j3" route="left_turn_j3" begin="0" end="39600" vehsPerHour="150" type="car"/>
+    <flow id="left_turn_flow_j4" route="left_turn_j4" begin="0" end="39600" vehsPerHour="100" type="car"/>
+    
+    <flow id="right_turn_flow_j1" route="right_turn_j1" begin="0" end="39600" vehsPerHour="80" type="car"/>
+    <flow id="right_turn_flow_j3" route="right_turn_j3" begin="0" end="39600" vehsPerHour="90" type="car"/>
+    <flow id="right_turn_flow_j5" route="right_turn_j5" begin="0" end="39600" vehsPerHour="70" type="car"/>
+    
+    <!-- 公車服務 -->
+    <flow id="bus_service_1" route="bus_route_1" begin="0" end="39600" period="180" type="bus"/>
+    <flow id="bus_service_2" route="bus_route_2" begin="60" end="39600" period="180" type="bus"/>
+    
+    <!-- 貨車 (低頻次) -->
+    <flow id="truck_flow_east" route="main_east" begin="0" end="39600" vehsPerHour="50" type="truck"/>
+    <flow id="truck_flow_west" route="main_west" begin="0" end="39600" vehsPerHour="45" type="truck"/>
+</routes>

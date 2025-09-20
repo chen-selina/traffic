@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    
+    <!-- 東向公車站 -->
+    <busStop id="bus_stop_j1_e" lane="J1_J2_0" startPos="10" endPos="40" friendlyPos="true"/>
+    <busStop id="bus_stop_j2_e" lane="J2_J3_0" startPos="10" endPos="40" friendlyPos="true"/>
+    <busStop id="bus_stop_j3_e" lane="J3_J4_0" startPos="10" endPos="40" friendlyPos="true"/>
+    <busStop id="bus_stop_j4_e" lane="J4_J5_0" startPos="10" endPos="40" friendlyPos="true"/>
+    
+    <!-- 西向公車站 -->
+    <busStop id="bus_stop_j5_w" lane="J5_J4_0" startPos="10" endPos="40" friendlyPos="true"/>
+    <busStop id="bus_stop_j4_w" lane="J4_J3_0" startPos="10" endPos="40" friendlyPos="true"/>
+    <busStop id="bus_stop_j3_w" lane="J3_J2_0" startPos="10" endPos="40" friendlyPos="true"/>
+    <busStop id="bus_stop_j2_w" lane="J2_J1_0" startPos="10" endPos="40" friendlyPos="true"/>
+</additional>

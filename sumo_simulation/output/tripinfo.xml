@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-09-20 10:38:00 by Eclipse SUMO GUI Version 1.24.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\cathy\OneDrive\Desktop\traffic_corridor_system\sumo_simulation\configs\../networks/corridor.net.xml"/>
+        <route-files value="C:\Users\cathy\OneDrive\Desktop\traffic_corridor_system\sumo_simulation\configs\../routes/corridor.rou.xml"/>
+    </input>
+
+    <output>
+        <summary-output value="C:\Users\cathy\OneDrive\Desktop\traffic_corridor_system\sumo_simulation\configs\../output/summary.xml"/>
+        <tripinfo-output value="C:\Users\cathy\OneDrive\Desktop\traffic_corridor_system\sumo_simulation\configs\../output/tripinfo.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="10"/>
+        <step-length value="1"/>
+    </time>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+        <time-to-teleport value="-1"/>
+        <max-depart-delay value="300"/>
+    </processing>
+
+</sumoConfiguration>
+-->
+
+<tripinfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tripinfo_file.xsd">
+</tripinfos>

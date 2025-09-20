@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edges xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edges_file.xsd">
+    
+    <!-- 主要走廊 (東西向) -->
+    <edge id="E0_J1" from="W0" to="J1" numLanes="3" speed="16.67" priority="5"/>
+    <edge id="J1_J2" from="J1" to="J2" numLanes="3" speed="16.67" priority="5"/>
+    <edge id="J2_J3" from="J2" to="J3" numLanes="3" speed="16.67" priority="5"/>
+    <edge id="J3_J4" from="J3" to="J4" numLanes="3" speed="16.67" priority="5"/>
+    <edge id="J4_J5" from="J4" to="J5" numLanes="3" speed="16.67" priority="5"/>
+    <edge id="J5_E0" from="J5" to="E0" numLanes="3" speed="16.67" priority="5"/>
+    
+    <!-- 反向 -->
+    <edge id="J1_E0" from="J1" to="W0" numLanes="3" speed="16.67" priority="5"/>
+    <edge id="J2_J1" from="J2" to="J1" numLanes="3" speed="16.67" priority="5"/>
+    <edge id="J3_J2" from="J3" to="J2" numLanes="3" speed="16.67" priority="5"/>
+    <edge id="J4_J3" from="J4" to="J3" numLanes="3" speed="16.67" priority="5"/>
+    <edge id="J5_J4" from="J5" to="J4" numLanes="3" speed="16.67" priority="5"/>
+    <edge id="E0_J5" from="E0" to="J5" numLanes="3" speed="16.67" priority="5"/>
+    
+    <!-- 南北向支線 -->
+    <edge id="J1_N1" from="J1" to="N1" numLanes="2" speed="13.89" priority="3"/>
+    <edge id="N1_J1" from="N1" to="J1" numLanes="2" speed="13.89" priority="3"/>
+    <edge id="J1_S1" from="J1" to="S1" numLanes="2" speed="13.89" priority="3"/>
+    <edge id="S1_J1" from="S1" to="J1" numLanes="2" speed="13.89" priority="3"/>
+    
+    <edge id="J2_N2" from="J2" to="N2" numLanes="2" speed="13.89" priority="3"/>
+    <edge id="N2_J2" from="N2" to="J2" numLanes="2" speed="13.89" priority="3"/>
+    <edge id="J2_S2" from="J2" to="S2" numLanes="2" speed="13.89" priority="3"/>
+    <edge id="S2_J2" from="S2" to="J2" numLanes="2" speed="13.89" priority="3"/>
+    
+    <edge id="J3_N3" from="J3" to="N3" numLanes="2" speed="13.89" priority="3"/>
+    <edge id="N3_J3" from="N3" to="J3" numLanes="2" speed="13.89" priority="3"/>
+    <edge id="J3_S3" from="J3" to="S3" numLanes="2" speed="13.89" priority="3"/>
+    <edge id="S3_J3" from="S3" to="J3" numLanes="2" speed="13.89" priority="3"/>
+    
+    <edge id="J4_N4" from="J4" to="N4" numLanes="2" speed="13.89" priority="3"/>
+    <edge id="N4_J4" from="N4" to="J4" numLanes="2" speed="13.89" priority="3"/>
+    <edge id="J4_S4" from="J4" to="S4" numLanes="2" speed="13.89" priority="3"/>
+    <edge id="S4_J4" from="S4" to="J4" numLanes="2" speed="13.89" priority="3"/>
+    
+    <edge id="J5_N5" from="J5" to="N5" numLanes="2" speed="13.89" priority="3"/>
+    <edge id="N5_J5" from="N5" to="J5" numLanes="2" speed="13.89" priority="3"/>
+    <edge id="J5_S5" from="J5" to="S5" numLanes="2" speed="13.89" priority="3"/>
+    <edge id="S5_J5" from="S5" to="J5" numLanes="2" speed="13.89" priority="3"/>
+</edges>

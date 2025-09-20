@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+               xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+    
+    <input>
+        <net-file value="../networks/corridor.net.xml"/>
+        <route-files value="../routes/corridor.rou.xml"/>
+    </input>
+    
+    <output>
+        <summary-output value="../output/summary.xml"/>
+        <tripinfo-output value="../output/tripinfo.xml"/>
+    </output>
+    
+    <time>
+        <begin value="0"/>
+        <end value="10"/>
+        <step-length value="1"/>
+    </time>
+    
+    <processing>
+        <ignore-route-errors value="true"/>
+        <time-to-teleport value="-1"/>
+        <max-depart-delay value="300"/>
+    </processing>
+</configuration>
